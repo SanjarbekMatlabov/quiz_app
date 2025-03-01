@@ -154,7 +154,7 @@ class _QuizScreenState extends State<QuizScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('English-Uzbek Quiz (${currentWordIndex + 1}/${wordPairs.length})'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.amber,
       ),
       body: Container(
         color: answered && !isCorrect ? Color(0xFFFDE9E9) : null, // Light red background for incorrect answers
@@ -174,22 +174,6 @@ class _QuizScreenState extends State<QuizScreen> {
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      SizedBox(height: 16),
-                      Container(
-                        width: double.infinity,
-                        padding: EdgeInsets.all(24),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.help_outline,
-                            size: 60,
-                            color: Colors.orange,
-                          ),
                         ),
                       ),
                     ],
@@ -216,15 +200,6 @@ class _QuizScreenState extends State<QuizScreen> {
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.grey,
-                        ),
-                      ),
-                      Container(
-                        alignment: Alignment.centerRight,
-                        child: IconButton(
-                          icon: Icon(Icons.volume_up, color: Colors.amber),
-                          onPressed: () {
-                            // Audio functionality would be implemented here
-                          },
                         ),
                       ),
                     ],
